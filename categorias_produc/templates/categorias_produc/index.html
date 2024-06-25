@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <{% load static %}
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>RePeKeS</title>
+
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <!-- progress barstle -->
+  <link rel="stylesheet" href="css/css-circular-prog-bar.css">
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap" rel="stylesheet">
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+
+
+
+
+  <link rel="stylesheet" href="css/css-circular-prog-bar.css">
+
+
+</head>
+
+<body>
+  <div class="top_container">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <span>
+              RePekes
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'index' %}"> Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="{% url 'indumentaria' %}"> Indumentaria </a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="{% url 'calzado' %}"> Calzado </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'accesorios' %}"> Accesorios </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'coches' %}">Coches</a>
+                </li>
+
+              </ul>
+            </div>
+        </nav>
+      </div>
+    </header>
+
+    {% block titulo_seccion %}
+
+    <section class="hero_section ">
+      <div class="hero-container container">
+        <div class="hero_detail-box">
+          <h1>
+            Un PLANETA
+            Mil AVENTURAS
+          </h1>
+          <p>
+            Encuentra indumentaria y articulos para los mas PeKeS de las mejores marcas, 
+            al mismo tiempo que dejas tu huella verde para cuidar el MUNDO que ellos disfrutarán
+          </p>
+        
+        </div>
+        
+        <div class="hero_img-container">
+          <div>
+            <img src="{% static 'images/logo.png' %}" alt="" class="img-fluid">
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    {% endblock titulo_seccion %}
+  </div>
+  <!-- end header section -->
+
+{% block contenido_seccion %}
+
+  <div class="common_style">
+
+    <!-- about section -->
+    <section class="about_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="about_img-container">
+              <img src="{% static 'images/indumentaria.png' %}" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="about_detail-box">
+              <h3>
+                INDUMENTARIA
+              </h3>
+              <p>
+                Prendas desde RN hasta talle 12 de marcas nacionales e importadas
+              </p>
+              <div class="">
+                <a href="" class="call_to-btn btn_white-border">
+                  COMPRAR
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- end about section -->
+
+    <!-- admission section -->
+    <section class="admission_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="admission_detail-box">
+              <h3>
+                CALZADO
+              </h3>
+              <p>
+                Encontrá calzado desde no caminantes hasta número 34
+              </p>
+              <div class="">
+                <a href="" class="call_to-btn btn_white-border">
+                  COMPRAR
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="admission_img-container">
+              <img src="{% static 'images/calzado.png' %}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- end admission section -->
+
+    <!-- why section -->
+    <section class="why_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="why_img-container">
+              <img src="{% static 'images/accesorios.png' %}" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="why_detail-box">
+              <h3>
+                ACCESORIOS
+              </h3>
+              <p>
+                Bañeras, mantas, mochilas, cambiadores y mucho mucho más!
+              </p>
+              <div class="">
+                <a href="" class="call_to-btn btn_white-border">
+                  COMPRAR
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- end why section -->
+
+    <!-- determine section -->
+    <section class="determine_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="determine_detail-box">
+              <h3>
+                COCHES/BUTACAS/SILLAS
+              </h3>
+              <p>
+                Todo lo que necesitas para el trasladar a tu bebe de manera segura y para el momento de la comida
+              </p>
+              <div class="">
+                <a href="" class="call_to-btn btn_white-border">
+                  COMPRAR
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="determine_img-container">
+              <img src="{% static 'images/coches.png' %}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- end determine section -->
+    {% endblock contenido_seccion %}
+  </div>
+
+
+    <!-- contact section -->
+
+    <section class="contact_section ">
+
+        <div class="container">
+         
+          <div class="row">
+            <div class="col-md-6">
+              <div class="d-flex justify-content-center d-md-block">
+                <h2>
+                  Contactanos
+                </h2>
+              </div>
+              <form action="">
+                <div class="contact_form-container">
+                  <div>
+                    <div>
+                      <input type="text" placeholder="Nombre">
+                    </div>
+                    <div>
+                      <input type="email" placeholder="Email">
+                    </div>
+                    <div>
+                      <input type="text" placeholder="Teléfono">
+                    </div>
+                    <div class="mt-5">
+                      <input type="text" placeholder="Mensage">
+                    </div>
+                    <div class="mt-5">
+                      <button type="submit">
+                        enviar
+                      </button>
+                    </div>
+                  </div>
+    
+                </div>
+    
+              </form>
+            </div>
+            <div class="col-md-6">
+              <div class="contact_img-box">
+                <img src="{% static 'images/rp.jpg' %}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end contact section -->
+
+      <section class="info_section layout_padding-top">
+        <div class="info_logo-box">
+          <h2>
+              RePeKeS
+          </h2>
+        </div>
+          <div class="container layout_padding2">
+            <div class="row">
+              
+              <div class="col-md-3">
+                <h5>
+                    Links de Interés 
+                </h5>
+                <ul>
+                  <li>
+                    <a href="https://worldvisionamericalatina.org/crianza-respetuosa-5-claves-para-la-educacion/">
+                        Crianza respetuosa
+                    </a>
+                  </li>
+                  <li>
+                   <a href="https://www.educapeques.com/juegos-educativos">
+                      Juegos educativos
+                   </a>
+                  </li>
+                  <li>
+                    <a href="https://www.guiainfantil.com/recetas/cocinar-con-ninos/recetas-rapidas-para-preparar-en-10-minutos-a-los-ninos/">
+                        Recetas saludables
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            
+            </div>
+          </div>
+          <div class="container">
+              <div class="social_container">
+                 
+                  <div class="social-box">
+                    <a href="">
+                      <img src="{% static 'images/fb.png' %}" alt="">
+                    </a>
+      
+                
+                    <a href="">
+                      <img src="{% static 'images/instagram.png' %}" alt="">
+                    </a>
+                  </div>
+                </div>
+          </div>
+        </section>
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2024 Todos los derechos reservados por 
+      <a>Florencia Diez</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+
+ 
+</body>
+
+</html>
