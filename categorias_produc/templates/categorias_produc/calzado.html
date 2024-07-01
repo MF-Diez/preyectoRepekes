@@ -9,12 +9,12 @@
           CALZADO
         </h1>
         <p>
-            Encontrá calzado desde no caminantes hasta número 34
+            Encontrá calzado desde NC - no caminantes - hasta el número 34
         </p>
       
       </div>
       
-      <div class="hero_img-container">
+      <div class="calzado_img-container">
         <div>
           <img src="{% static 'images/calzado.png' %}" width="50%" alt="" class="img-fluid">
         </div>
@@ -27,5 +27,29 @@
 
 {% block contenido_seccion %}
 
+<div class="tabla-estructura">
+  <table class="tabla-productos">
+    <thead>
+     <tr>
+        <th>ID</th>
+        <th>PRODUCTO</th>
+        <th>MARCA</th>
+        <th>TALLE</th>
+        <th>PRECIO</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for z in calzado %}
+        <tr>
+          <td>{{ z.id }}</td>
+          <td>{{ z.nombre }}</td>
+         <td>{{ z.marca }}</td>
+         <td>{{ z.talle }}</td>
+         <td>{{ z.precio }}</td>
+        </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+</div>
 
 {% endblock contenido_seccion %}

@@ -1,5 +1,7 @@
 {% extends "categorias_produc/index.html" %}
 {% load static %}
+
+
 {% block titulo_seccion %}
 
 <section class="hero_section ">
@@ -14,7 +16,7 @@
       
       </div>
       
-      <div class="hero_img-container">
+      <div class="ind_img-container">
         <div>
           <img src="{% static 'images/indumentaria.png' %}" width="50%" alt="" class="img-fluid">
         </div>
@@ -27,5 +29,30 @@
 
 {% block contenido_seccion %}
 
+
+<div class="tabla-estructura">
+  <table class="tabla-productos">
+    <thead>
+     <tr>
+        <th>ID</th>
+        <th>PRODUCTO</th>
+        <th>MARCA</th>
+        <th>TALLE</th>
+        <th>PRECIO</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in indumentaria %}
+        <tr>
+          <td>{{ i.id }}</td>
+          <td>{{ i.nombre }}</td>
+         <td>{{ i.marca }}</td>
+         <td>{{ i.talle }}</td>
+         <td>{{ i.precio }}</td>
+        </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+</div>
 
 {% endblock contenido_seccion %}

@@ -39,7 +39,6 @@ body {
 .call_to-btn img {
   width: 18px;
   margin-left: 10px;
-  
 }
 
 .btn_on-hover {
@@ -194,12 +193,38 @@ a:focus {
 .hero_img-container {
   width: 68%;
   margin-right: -8%;
-  margin-top: -5%;
+  margin-top: 5%;
 }
 
 .hero_img-container img {
   width: 100%;
 }
+
+.ind_img-container img {
+  width: 60%;
+  margin-left: 250px;
+  margin-top: -80px;
+}
+
+.calzado_img-container img {
+  width: 52%;
+  margin-left: 400px;
+  margin-top: -80px;
+}
+
+.accesorios_img-container img {
+  width: 55%;
+  margin-left: 350px;
+  margin-top: -80px;
+}
+
+
+.coche_img-container img {
+  width: 50%;
+  margin-left: 400px;
+  margin-top: -80px;
+}
+
 
 .hero_detail-box {
   color: #fefeff;
@@ -294,7 +319,109 @@ a:focus {
 
 /* end determine section */
 
+/* client section */
+.client_section h2,
+.client_section h5,
+.client_section p {
+  font-weight: 600;
+}
 
+.client_section h2 {
+  text-align: center;
+}
+
+
+.client_section h5 {
+  font-size: 24px;
+  color: #fdd31d;
+}
+
+.client_section .row {
+  align-items: center;
+  padding: 75px 0;
+  margin: 0 15px;
+}
+
+.client_section img {
+  width: 100%;
+}
+
+.client_img-box::before,
+.client_img-box::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #fdd31d;
+}
+
+.client_img-box::before {
+  top: -15px;
+  transform: rotate(139deg);
+  left: -15px;
+  animation: beforeanimate 1s;
+  animation-delay: .1s;
+}
+
+.client_img-box::after {
+  bottom: -15px;
+  transform: rotate(142deg);
+  right: -15px;
+  animation: afteranimate 1s;
+  animation-delay: .1s;
+}
+
+
+@keyframes beforeanimate {
+  0% {
+    top: 43%;
+    transform: rotate(142deg);
+    left: 31%;
+
+  }
+
+  100% {
+    top: -15px;
+    transform: rotate(139deg);
+    left: -15px;
+  }
+}
+
+@keyframes afteranimate {
+  0% {
+    bottom: 46%;
+    transform: rotate(142deg);
+    right: 35%;
+  }
+
+  100% {
+    bottom: -15px;
+    transform: rotate(142deg);
+    right: -15px;
+  }
+}
+
+.client_section .carousel-indicators {
+  margin: 0;
+  justify-content: flex-end;
+  padding-right: 15px;
+  bottom: 20px;
+}
+
+.client_section .carousel-indicators li {
+  width: 25px;
+  height: 25px;
+  background-color: #6bd1bd;
+  border-radius: 100%;
+  opacity: 1;
+}
+
+.client_section .carousel-indicators li.active {
+  background-color: #fdd31d;
+}
+
+/* end client section */
 
 /* contact section */
 
@@ -336,7 +463,8 @@ a:focus {
 }
 
 .contact_img-box img {
-  width: 100%;
+  width: 50%;
+  margin-left: 200px;
 }
 
 .contact_section h2 {
@@ -418,7 +546,7 @@ a:focus {
   width: 90%;
   margin: 0 auto;
   border-top: 1px solid #898989;
-  padding: 25px 0px;
+  padding: 25px 0;
 }
 
 .info_section .social-box {
@@ -434,6 +562,41 @@ a:focus {
 }
 
 /* end info section */
+
+/* tablas de prodcutos */
+
+.tabla-estructura {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-productos th,
+.tabla-productos td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-productos th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.tabla-productos tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+/* end tablas de prodcutos */
 
 /* footer section*/
 

@@ -14,7 +14,7 @@
       
       </div>
       
-      <div class="hero_img-container">
+      <div class="accesorios_img-container">
         <div>
           <img src="{% static 'images/accesorios.png' %}" width="50%" alt="" class="img-fluid">
         </div>
@@ -27,5 +27,29 @@
 
 {% block contenido_seccion %}
 
+<div class="tabla-estructura">
+  <table class="tabla-productos">
+    <thead>
+     <tr>
+        <th>ID</th>
+        <th>PRODUCTO</th>
+        <th>MARCA</th>
+        <th>DESCRIPCION</th>
+        <th>PRECIO</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for a in accesorios %}
+        <tr>
+          <td>{{ a.id }}</td>
+          <td>{{ a.nombre }}</td>
+         <td>{{ a.marca }}</td>
+         <td>{{ a.descripcion }}</td>
+         <td>{{ a.precio }}</td>
+        </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+</div>
 
 {% endblock contenido_seccion %}
