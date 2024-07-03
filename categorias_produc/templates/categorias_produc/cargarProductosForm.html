@@ -1,0 +1,86 @@
+{% extends "categorias_produc/index.html" %}
+{% load static %}
+
+
+{% block titulo_seccion %}
+
+<section class="hero_section ">
+    <div class="hero-container container">
+      <div class="hero_detail-box">
+        <h1>
+          FORMULARIO DE CARGA DE PRODUCTOS
+        </h1>
+        <p>
+            Carga nuevos productos a por categoría
+        </p>
+      
+      </div>
+      
+      <div class="ind_img-container">
+        <div>
+          <img src="{% static 'images/indumentaria.png' %}" width="50%" alt="" class="img-fluid">
+        </div>
+      </div>
+   
+    </div>
+  </section>
+
+{% endblock titulo_seccion %}
+
+{% block contenido_seccion %}
+<div>    
+    <h2>
+        FORMULARIO DE INDUMENTARIA
+    </h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table}}
+        </table>
+        <input type="submit" value="CARGAR">
+    </form>
+</div>
+<br>
+<br>
+<div>    
+  <h2>
+      FORMULARIO DE CALZADO
+  </h2>
+  <form action="" method="post">
+      {% csrf_token %}
+      <table>
+          {{ form.as_table }}
+      </table>
+      <input type="submit" value="CARGAR">
+  </form>
+</div>
+<br>
+<br>
+<div>    
+    <h2>
+        FORMULARIO DE ACCESORIOS
+    </h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="CARGAR">
+    </form>
+</div>
+<br>
+<br>
+<div>    
+    <h2>
+        FORMULARIO DE COCHES
+    </h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="CARGAR">
+    </form>
+</div>
+
+{% endblock contenido_seccion %}
