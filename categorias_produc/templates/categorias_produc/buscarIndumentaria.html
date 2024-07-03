@@ -1,0 +1,43 @@
+{% extends "categorias_produc/index.html" %}
+{% load static %}
+
+
+{% block titulo_seccion %}
+
+<section class="hero_section ">
+    <div class="hero-container container">
+      <div class="hero_detail-box">
+        <h1>
+          BUSCAR PRODUCTOS DE INDUMENTARIA
+        </h1>
+        <p>
+            Busca entre nuestro stock de productos de indumentaria
+        </p>
+      
+      </div>
+      
+      <div class="ind_img-container">
+        <div>
+          <img src="{% static 'images/indumentaria.png' %}" width="50%" alt="" class="img-fluid">
+        </div>
+      </div>
+   
+    </div>
+  </section>
+
+{% endblock titulo_seccion %}
+
+{% block contenido_seccion %}
+<div>    
+
+    <form action="{% url 'encontrarIndumentaria' %}" method="get">
+        {% csrf_token %}
+        <table>
+            <p> Ingrese el nombre del producto a buscar: <input type="text" name="buscarInd" id="buscarInd"></p>
+        </table>
+        <input type="submit" value="BUSCAR">
+    </form>
+</div>
+
+
+{% endblock contenido_seccion %}

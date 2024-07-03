@@ -1,0 +1,46 @@
+{% extends "categorias_produc/index.html" %}
+{% load static %}
+{% block titulo_seccion %}
+
+<section class="hero_section ">
+    <div class="hero-container container">
+      <div class="hero_detail-box">
+        <h1>
+            FORMULARIO DE CARGA DE CALZADO
+        </h1>
+        <p>
+            Cargá nuevos productos a esta sección
+        </p>
+      
+      </div>
+      
+      <div class="calzado_img-container">
+        <div>
+          <img src="{% static 'images/calzado.png' %}" width="50%" alt="" class="img-fluid">
+        </div>
+      </div>
+   
+    </div>
+  </section>
+
+{% endblock titulo_seccion %}
+
+{% block contenido_seccion %}
+
+<div>    
+    <h2>
+        NUEVO PRODUCTO
+    </h2>
+    <br>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="CARGAR">
+    </form>
+  </div>
+<br>
+<br>
+
+{% endblock contenido_seccion %}

@@ -4,7 +4,7 @@ Proyecto final del curso de Python de Coderhouse.
 
 Descripción
 Este proyecto consiste en una aplicación web desarrollada con Python y Django que gestiona una base de datos de productos y categorías.
-La misma tiene por obejtivo la venta de productos para niños pero bajo la metodología de moda CIRCULAR. En el footer se inlcuyeron enlaces funcionales de temas de interes para padres tales como JUEGOS, RECETAS, ETC
+La misma tiene por obejtivo la venta de productos para niños pero bajo la metodología de MODA CIRCULAR. En el footer se inlcuyeron enlaces funcionales de temas de interes para padres tales como JUEGOS, RECETAS, ETC
 
 Estructura del Proyecto
 
@@ -31,7 +31,16 @@ Uso
 Para iniciar el servidor de desarrollo, ejecuta:
           python manage.py runserver
 Luego, abre tu navegador y visita http://127.0.0.1:8000/ para interactuar con la aplicación.
+Todos los enlaces para moverse en la aplicación web son funcionales.
 
+Para cargar NUEVOS PRODUCTOS utiliza las siguientes rutas:
+INDUMENTARIA: http://127.0.0.1:8000/indumentariaForm
+CALZADO: http://127.0.0.1:8000/calzadoForm
+ACCESORIOS: http://127.0.0.1:8000/accesoriosForm
+COCHES: http://127.0.0.1:8000/cochesForm
+
+Para realizar una BUSQUEDA de porductos de INDUMENTARIA utiliza las siguiente ruta:
+http://127.0.0.1:8000/buscarIndumentaria
 
 
 
